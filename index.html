@@ -1,0 +1,128 @@
+<!doctype>
+<html>
+<head>
+<title>Tic Tac Toe</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--Latest compiled and minified JavaScript--> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="game.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="nav navbar-left" >
+<a href="#" target="_blank" class="navbar-brand">Tic Tac Toe</a>
+</div>
+<div class="navbar-header">
+<ul class="nav navbar-nav collapse navbar-collapse" id="myNavbar">
+<li><a href="https://en.wikipedia.org/wiki/Tic-tac-toe" target="_blank">About Game</a></li>
+</ul>
+</div>
+</nav>
+
+<div class="jumbotron">
+<div class="row">
+<div class="col-xs-8"style="float:left">
+<div class="heading">
+<h1 style="font-family:Ranchers-regular;text-align:center"><strong>Tic Tac Toe</strong></h1>
+<h2 style="font-family:Ranchers-regular;text-align:center" >Welcome On-Board!</h2>
+</div></div>
+<div class="col-xs-4">
+<img class="img-resposive" src="minion.png" alt="Minion welcome" height="200px" style="margin-right:3px">
+</div></div>
+</div>
+<div class="row">
+
+<div class="col-xs-4 style">
+<div class="buttons">
+
+<button class="btn btn-info" id="start"style="float:center">Start Game</button>
+<button class="btn btn-warning" onclick="restart()" id="reset" style="float:center">Reset Game</button><br>
+</div>
+
+<div class="rules">
+<h2 style="font-family:Ranchers-regular"><strong>Instructions</strong></h2> 
+<ul>
+<li>Press Start Button and choose your marks accordingly( X or O).</li>
+<li>Now, Player whose turn is first, Click on his/her button.</li>
+<li>Now choose the cell number and your mark will be set their accordingly.</li>
+<li>Repeat above step till reach to any conclusive result.</li>
+<li>All the best</li> 
+</ul>
+</div>
+</div>
+
+
+
+<div class="col-xs-4">
+<div class="container" style="text-align:center">
+<button class="btn" style="background-color:#73C6B6;color:white">The Grid</button><br>
+<div class="square">
+<h1 id="cel"><span id="s3"> </span></h1>
+</div>
+<div class="square">
+<h1 id="cel"><span id="s2" > </span></h1>
+</div>
+<div class="square">
+<h1 id="cel"><span id="s1"> </span></h1>
+</div>
+<div class="square">
+<h1 id="cel"><span id="s6"> </span></h1>
+</div>
+<div class="square">
+<h1 id="cel"><span id="s5"> </span></h1>
+</div>
+<div class="square">
+<h1 id="cel"><span id="s4"> </span></h1>
+</div>
+<div class="square">
+<h1 id="cel"><span id="s9"> </span></h1>
+</div>
+<div class="square">
+<h1 id="cel"><span id="s8"> </span></h1>
+</div>
+<div class="square">
+<h1 id="cel"><span id="s7"> </span></h1>
+</div>
+
+</div>
+</div>
+
+
+
+<div class="col-xs-4">
+
+<div class="container">
+<div class="battle" >
+<button class="btn btn-primary" id="p1"><span id="p1m" style="margin-right:10px"> </span> : <span id="p1c"><strong> </strong></span></button>
+<button class="btn btn-warning">v/s</button>
+<button class="btn btn-danger" id="p2" style="float:right"><span id="p2m"> </span> : <span id="p2c"><strong> </strong></span></button>
+</div>
+<div class="cell">
+<button class="btn" style="background-color:#5D6D7E;color:white">Cell Pannel</button><br>
+<button class="btn c c1" style="background-color:#AEB6BF" >1</button>
+<button class="btn c c2" style="background-color:#AEB6BF" >2</button>
+<button class="btn c c3" style="background-color:#AEB6BF" >3</button><br>
+<button class="btn c c4" style="background-color:#AEB6BF" >4</button>
+<button class="btn c c5" style="background-color:#AEB6BF" >5</button>
+<button class="btn c c6" style="background-color:#AEB6BF" >6</button><br>
+<button class="btn c c7" style="background-color:#AEB6BF" >7</button>
+<button class="btn c c8" style="background-color:#AEB6BF" >8</button>
+<button class="btn c c9" style="background-color:#AEB6BF" >9</button>
+<h3 style="color:white">Choosed cell: <span id="o"></span></h3>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="game.js"></script>
+
+<footer>
+<div class="container-fluid">
+<center>
+<p style="color:white">The Tic Tac Toe Game.@Designed By Manan Mishra</p>
+</center>
+</div> </footer>
+</body>
+</html>

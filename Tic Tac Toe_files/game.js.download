@@ -1,0 +1,338 @@
+console.log("connected");
+
+var p1=document.querySelector("#p1");
+var p2=document.querySelector("#p2");
+var start=document.querySelector("#start");
+var re=document.querySelector("#reset");
+
+var c1=document.querySelector("#c1");
+var c2=document.querySelector("#c2");
+var c3=document.querySelector("#c3");
+var c4=document.querySelector("#c4");
+var c5=document.querySelector("#c5");
+var c6=document.querySelector("#c6");
+var c7=document.querySelector("#c7");
+var c8=document.querySelector("#c8");
+var c9=document.querySelector("#c9");
+
+var s1=document.querySelector("#s1");
+var s2=document.querySelector("#s2");
+var s3=document.querySelector("#s3");
+var s4=document.querySelector("#s4");
+var s5=document.querySelector("#s5");
+var s6=document.querySelector("#s6");
+var s7=document.querySelector("#s7");
+var s8=document.querySelector("#s8");
+var s9=document.querySelector("#s9");
+
+
+var o=document.querySelector("#o");
+var arr=["nil","nil","nil","nil","nil","nil","nil","nil","nil"];
+
+var stat="nil";
+
+function nilCheck(a){
+	for(var i=0;i<a.length;i++)
+	{
+		if(a[i]==="nil"){return true;}
+	}
+return false;
+} 
+
+
+
+function winCheck(a){
+			
+		if(a[0]===a[1]&&a[1]===a[2]&&a[0]!=="nil"){
+			if(a[0]===p1choice){
+			return "Player1";}
+			else{ return "Player2";}
+		}
+		else if(a[3]===a[4]&&a[4]===a[5]&&a[3]!=="nil")
+		{
+			if(a[3]===p1choice){
+			return "Player1";}
+			else{ return "Player2";}
+		}
+	else if(a[6]===a[7]&&a[7]===a[8]&&a[6]!=="nil")
+	{
+		if(a[6]===p1choice){
+			return "Player1";}
+			else{ return "Player2";}
+	}
+	
+	else if(a[0]===a[3]&&a[3]===a[6]&&a[0]!=="nil")
+	{
+		
+		if(a[6]===p1choice){
+			return "Player1";}
+			else{ return "Player2";}
+		
+	}
+	else if(a[1]===a[4]&&a[4]===a[7]&&a[1]!=="nil")
+	{
+		if(a[1]===p1choice){
+			return "Player1";}
+			else{ return "Player2";}
+	}
+	else if(a[2]===a[5]&&a[5]===a[8]&&a[2]!=="nil")
+	{
+		if(a[6]===p1choice){
+			return "Player1";}
+			else{ return "Player2";}
+	}
+	
+	else if(a[0]===a[4]&&a[4]===a[8]&&a[0]!=="nil")
+	{
+		if(a[0]===p1choice){
+			return "Player1";}
+			else{ return "Player2";}
+	}
+	
+	else if(a[2]===a[4]&&a[4]===a[6]&&a[2]!=="nil")
+	{
+		if(a[6]===p1choice){
+			return "Player1";}
+			else{ return "Player2";}
+	}
+	
+
+else if (nilCheck(arr)===false)
+{
+	   return "Match Tied";	
+}
+else{
+	
+return "no";
+}
+}
+
+
+var p1choice;
+var p2choice;
+
+var cell;
+
+function setMark(name)
+{
+	var choice=prompt(name+" enter your choice (X or O): ")
+	return choice;
+}
+
+
+p1.disabled=true;
+p2.disabled=true;
+re.disabled=true;
+
+var player1;
+var player2;
+var toss;
+start.addEventListener("click",function(){
+	player1=prompt("Hey! Player one name please:");
+	player2=prompt("Hey! Player two name please:");
+	 toss=Math.floor(Math.random() * 2) + 1;	
+	if(toss===1){
+		alert(player1+" will begain.");
+		p1choice= setMark(player1);
+		
+		if(p1choice==='X'){
+			p2choice='O';
+			
+		}
+		else{
+			p2choice='X';
+		}
+		alert("Player one choosed: "+p1choice+" Player two: "+p2choice);
+	
+	document.querySelector("#p1c").textContent=p1choice;
+	document.querySelector("#p2c").textContent=p2choice;
+	
+	p1.disabled=false;}
+	
+	else{
+		alert(player2+" will begain");
+		p2choice=setMark(Player2);
+		
+		if(p2choice==='X'){
+			p1choice='O';
+		}
+		else{
+			p1choice='X';
+		}
+        alert("Player two choosed: "+p2choice+" Player one: "+p1choice);
+		
+			document.querySelector("#p1c").textContent=p1choice;
+	document.querySelector("#p2c").textContent=p2choice;
+		p2.disabled=false;}
+start.disabled=true;
+re.disabled=false;
+});
+
+function setCell(choice){
+
+c1.addEventListener("click",function()
+{
+	cell=1;
+	o.textContent=cell;
+	s1.textContent=choice
+	arr[0]=choice;
+	c1.disabled=true;
+});
+
+c2.addEventListener("click",function(){
+
+	cell=2;
+	arr[1]=choice;
+	o.textContent=cell;
+	s2.textContent=choice;
+	arr[1]=choice;
+	c2.disabled=true;
+});
+
+c3.addEventListener("click",function(){
+{
+	cell=3;
+	arr[2]=choice;
+o.textContent=cell;
+s3.textContent=choice;
+c3.disabled=true;}
+});	
+
+
+c4.addEventListener("click",function(){
+
+cell=4;
+arr[3]=choice;
+o.textContent=cell;
+s4.textContent=choice;
+c4.disabled=true;});
+
+c5.addEventListener("click",function()
+{
+	cell=5;
+	o.textContent=cell;
+    arr[4]=choice;
+	s5.textContent=choice;
+c5.disabled=true;});
+
+c6.addEventListener("click",function(){
+
+cell=6;
+o.textContent=cell;
+arr[5]=choice;
+s6.textContent=choice;
+	c6.disabled=true;});
+
+c7.addEventListener("click",function(){
+cell=7;
+o.textContent=cell;
+arr[6]=choice;
+s7.textContent=choice;
+	c7.disabled=true;});
+
+c8.addEventListener("click",function(){
+cell=8;
+o.textContent=cell;
+s8.textContent=choice;
+arr[7]=choice;
+	c8.disabled=true;});
+
+c9.addEventListener("click",function(){
+cell=9;
+o.textContent=cell;
+arr[8]=choice;
+s9.textContent=choice;
+	c9.disabled=true;});
+}
+
+
+
+
+p1.addEventListener("click",function()
+{
+stat=winCheck(arr);
+if(stat==="no"){
+setCell(p1choice);
+p1.disabled=true;
+p2.disabled=false;
+}
+else{
+if(stat==="Player1"){
+alert("Congratulations Player One,You have won");
+restart();}
+
+else if(stat==="Player2"){
+	alert("Congratulations Player Two, you have won.");
+restart();
+}
+
+else
+{alert("Match Tied");
+restart();
+}
+}});
+
+
+p2.addEventListener("click",function(){
+
+stat=winCheck(arr);
+if(stat==="no"){
+setCell(p2choice);
+p1.disabled=false;
+p2.disabled=true;
+}
+else{
+if(stat==="Player1"){
+alert("Congratulations Player One,You have won");
+restart();}
+
+else if(stat==="Player2"){
+	alert("Congratulations Player Two, you have won.");
+restart();
+}
+
+else
+{alert("Match Tied");
+restart();}
+
+}});
+
+
+function restart(){
+	 p1.disabled=true;
+  p2.disabled=true;
+  start.disabled=false;
+  s1.textContent=" ";
+  s2.textContent=" ";
+  s3.textContent=" ";
+  s4.textContent=" ";
+  s5.textContent=" ";
+  s6.textContent=" ";
+  s7.textContent=" ";
+  s8.textContent=" ";
+  s9.textContent=" ";
+
+c1.disabled=false;
+c2.disabled=false;
+c3.disabled=false;
+c4.disabled=false;
+c5.disabled=false;
+c6.disabled=false;
+c7.disabled=false;
+c8.disabled=false;
+c9.disabled=false;
+
+o.textContent=" ";
+start.disabled=false;
+re.disabled=true;
+stat="nil";
+}
+
+re.addEventListener("click",function(){
+	var wish=prompt("Do you Want to Restart (y/n)?");
+	if(wish==="y"){
+		restart();
+	}	
+});
+
+

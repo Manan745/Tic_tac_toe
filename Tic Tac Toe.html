@@ -1,0 +1,120 @@
+
+<!-- saved from url=(0067)file:///C:/Users/Manan%20Mishra/Documents/Tic%20Tac%20Toe/game.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Tic Tac Toe</title>
+<link rel="stylesheet" href="./Tic Tac Toe_files/bootstrap.min.css">
+<script src="./Tic Tac Toe_files/jquery.min.js.download"></script>
+    <!--Latest compiled and minified JavaScript--> 
+    <script src="./Tic Tac Toe_files/bootstrap.min.js.download"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./Tic Tac Toe_files/game.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="nav navbar-left">
+<a href="file:///C:/Users/Manan%20Mishra/Documents/Tic%20Tac%20Toe/game.html#" target="_blank" class="navbar-brand">Tic Tac Toe</a>
+</div>
+<div class="navbar-header">
+<ul class="nav navbar-nav collapse navbar-collapse" id="myNavbar">
+<li><a href="file:///C:/Users/Manan%20Mishra/Documents/Tic%20Tac%20Toe/game.html#" target="_blank">About Game</a></li>
+</ul>
+</div>
+</nav>
+
+<div class="jumbotron">
+<h1 style="font-family:Ranchers-regular;margin-left:35px"><strong>Tic Tac Toe</strong></h1>
+<h2 style="font-family:Ranchers-regular;margin-left:40px">Welcome On-Board!</h2>
+</div>
+<div class="row">
+<div class="col-xs-4">
+<div class="buttons">
+
+<button class="btn btn-info" id="start" style="float:center">Start Game</button>
+<button class="btn btn-warning" id="reset" style="float:center" disabled="">Reset Game</button><br>
+</div>
+
+<div class="rules">
+<h2 style="font-family:Ranchers-regular"><strong>Instructions</strong></h2> 
+<ul>
+<li>Press Start Button and choose your marks accordingly( X or O).</li>
+<li>Now, Player whose turn is first, Click on his/her button.</li>
+<li>Now choose the cell number and your mark will be set their accordingly.</li>
+<li>Repeat above step till reach to any conclusive result.</li>
+<li>All the best</li> 
+</ul>
+</div>
+</div>
+
+
+
+<div class="col-xs=4">
+<div class="container">
+
+<button class="btn btn-primary" id="p1" disabled="">Player One : <span id="p1c"><strong> </strong></span></button>
+<button class="btn btn-danger" id="p2" disabled="">Player Two : <span id="p2c"><strong> </strong></span></button>
+<div class="cell">
+<button class="btn" style="background-color:#5D6D7E;color:white">Cell Pannel</button><br>
+<button class="btn" style="background-color:#AEB6BF" id="c1">1</button>
+<button class="btn" style="background-color:#AEB6BF" id="c2">2</button>
+<button class="btn" style="background-color:#AEB6BF" id="c3">3</button><br>
+<button class="btn" style="background-color:#AEB6BF" id="c4">4</button>
+<button class="btn" style="background-color:#AEB6BF" id="c5">5</button>
+<button class="btn" style="background-color:#AEB6BF" id="c6">6</button><br>
+<button class="btn" style="background-color:#AEB6BF" id="c7">7</button>
+<button class="btn" style="background-color:#AEB6BF" id="c8">8</button>
+<button class="btn" style="background-color:#AEB6BF" id="c9">9</button>
+<h3 style="color:white">Choosed cell: <span id="o"></span></h3>
+</div>
+
+
+</div>
+</div>
+
+<div class="col-xs-4">
+<div class="container" style="text-align:center">
+<button class="btn" style="background-color:#73C6B6;color:white">The Grid</button><br>
+<div class="square">
+<h1 id="cel"><span id="s3"> </span></h1>
+</div>
+<div class="square">
+<h1 id="cel"><span id="s2"> </span></h1>
+</div>
+<div class="square">
+<h1 id="cel"><span id="s1"> </span></h1>
+</div>
+<div class="square">
+<h1 id="cel"><span id="s6"> </span></h1>
+</div>
+<div class="square">
+<h1 id="cel"><span id="s5"> </span></h1>
+</div>
+<div class="square">
+<h1 id="cel"><span id="s4"> </span></h1>
+</div>
+<div class="square">
+<h1 id="cel"><span id="s9"> </span></h1>
+</div>
+<div class="square">
+<h1 id="cel"><span id="s8"> </span></h1>
+</div>
+<div class="square">
+<h1 id="cel"><span id="s7"> </span></h1>
+</div>
+
+</div>
+</div>
+
+
+</div>
+
+<script type="text/javascript" src="./Tic Tac Toe_files/game.js.download"></script>
+
+</body></html>

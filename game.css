@@ -1,0 +1,73 @@
+body
+{
+	background-image:url("back1.jpg");
+}
+
+.square{
+	width:30%;
+	padding-bottom:20%;
+	background-color:white;
+	float:right;
+	margin:1.66%;
+	border:3px solid black;
+border-radius:10%;
+height:10%;
+text-align:center;
+font-size:50px;
+}
+.container{
+	background-color:rgba(0, 0, 0, 0.7);
+	float:right;
+	max-width:480px;
+	max-height:480px;
+	margin:0%;
+	text-align:center;
+}
+
+
+.jumbotron{
+	background-color:rgba(52, 73, 94, 0.7);
+	color:White;
+}
+
+#p1{
+float:left;}
+
+#p2{
+	float:center-left;
+}
+}
+#buttons{
+	max-width:900px;
+	margin-top:50px;
+	max-height:100px;
+}
+.btn{
+	margin:2%;
+	font-size:20px;
+	
+}
+}
+h1{
+	font-family:Ranchers-regular;
+	
+}
+.cel{
+	font-family:Ranchers-regular;
+	font-size:100px;
+}
+
+.cell{
+	text-align:center;
+	border-bottom:4px solid;
+	
+	
+}
+span{
+	font-family:Ranchers-regular;
+}
+.style{
+	 background-color:rgba(0, 0, 0, 0.7);
+	 color:White;
+	 font-size:30px;
+	 }
