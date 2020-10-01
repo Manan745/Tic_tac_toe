@@ -15,8 +15,16 @@
 <div class="nav navbar-left" >
 <a href="#" target="_blank" class="navbar-brand">Tic Tac Toe</a>
 </div>
+<div>
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
 <div class="navbar-header">
 <ul class="nav navbar-nav collapse navbar-collapse" id="myNavbar">
+
 <li><a href="https://en.wikipedia.org/wiki/Tic-tac-toe" target="_blank">About Game</a></li>
 </ul>
 </div>
@@ -24,18 +32,17 @@
 
 <div class="jumbotron">
 <div class="row">
-<div class="col-xs-8"style="float:left">
+<div class="col-xs-12">
 <div class="heading">
 <h1 style="font-family:Ranchers-regular;text-align:center"><strong>Tic Tac Toe</strong></h1>
 <h2 style="font-family:Ranchers-regular;text-align:center" >Welcome On-Board!</h2>
 </div></div>
-<div class="col-xs-4">
-<img class="img-resposive" src="minion.png" alt="Minion welcome" height="200px" style="margin-right:3px">
-</div></div>
 </div>
-<div class="row">
+</div>
 
-<div class="col-xs-4 style">
+
+<div class="row" style="background-color:rgba(0, 0, 0, 0.7)">
+<div class="col-sm-8 style">
 <div class="buttons">
 
 <button class="btn btn-info" id="start"style="float:center">Start Game</button>
@@ -49,15 +56,18 @@
 <li>Now, Player whose turn is first, Click on his/her button.</li>
 <li>Now choose the cell number and your mark will be set their accordingly.</li>
 <li>Repeat above step till reach to any conclusive result.</li>
+<li>In case you want to start again, hit the Reset button</li>
 <li>All the best</li> 
 </ul>
 </div>
 </div>
+<div class="col-sm-4">
+<img class="img-resposive" src="minion.png" alt="Minion welcome" height="350px" style="margin-right:3px">
+</div></div>
 
-
-
-<div class="col-xs-4">
-<div class="container" style="text-align:center">
+<div class="row">
+<div class="col-sm-12" style="float:center">
+<div class="grid">
 <button class="btn" style="background-color:#73C6B6;color:white">The Grid</button><br>
 <div class="square">
 <h1 id="cel"><span id="s3"> </span></h1>
@@ -86,15 +96,15 @@
 <div class="square">
 <h1 id="cel"><span id="s7"> </span></h1>
 </div>
-
 </div>
 </div>
+</div>
 
 
 
-<div class="col-xs-4">
-
-<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div class="container" style="background-color:rgba(0, 0, 0, 0.7);margin-left:35.15%" >
 <div class="battle" >
 <button class="btn btn-primary" id="p1"><span id="p1m" style="margin-right:10px"> </span> : <span id="p1c"><strong> </strong></span></button>
 <button class="btn btn-warning">v/s</button>
@@ -121,7 +131,7 @@
 <footer>
 <div class="container-fluid">
 <center>
-<p style="color:white">The Tic Tac Toe Game.@Designed By Manan Mishra</p>
+<p style="color:white">The Tic Tac Toe Game.@Developed by Manan Mishra</p>
 </center>
 </div> </footer>
 </body>
