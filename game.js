@@ -200,25 +200,17 @@ start.disabled=true;
 re.disabled=false;
 });
 
-function Check(key,u)
-{if(u.length===0){return false;} 
-for(var i=0;i<u.length;i++){
-	if(u[i]===key){return true;}
-	else{return false;}
-}}
-
-
-function setEnable(a){
-var flag=false;
-for(var j=0;j<a.length;j++)
+function setEnableAll(c)
 {
-	flag=Check(a[j],used_cell)
-	if(flag===true){
-		continue;
+	
+	for(var i=0;i<c.length;i++)
+	{
+		c[i].disabled=false;
 	}
-else{a[j].disabled=false;}
 }
-}
+
+
+
 
 
 function setDisable(array){
@@ -243,6 +235,7 @@ c1.addEventListener("click",function()
 	o.textContent=cell;
 	s1.textContent=choice
 	arr[0]=choice;
+	
 	setDisable(c);
 	return c1;
 });
@@ -254,6 +247,7 @@ c2.addEventListener("click",function(){
 	arr[1]=choice;
 	o.textContent=cell;
 	s2.textContent=choice;
+	used_cell.push(c2);
 	setDisable(c);
 	return c2;
 });
@@ -265,6 +259,7 @@ c3.addEventListener("click",function(){
 	arr[2]=choice;
 o.textContent=cell;
 s3.textContent=choice;
+
 setDisable(c);
 return c3;
 
@@ -278,6 +273,7 @@ cell=4;
 arr[3]=choice;
 o.textContent=cell;
 s4.textContent=choice;
+
 setDisable(c);
 return c4;
 
@@ -290,7 +286,8 @@ c5.addEventListener("click",function()
 	o.textContent=cell;
     arr[4]=choice;
 	s5.textContent=choice;
-	setDisable(5);
+	
+	setDisable(c);
 	return c5;
 });
 
@@ -301,6 +298,7 @@ cell=6;
 o.textContent=cell;
 arr[5]=choice;
 s6.textContent=choice;
+
 setDisable(c);
 return c6;
 	
@@ -313,6 +311,7 @@ cell=7;
 o.textContent=cell;
 arr[6]=choice;
 s7.textContent=choice;
+
 setDisable(c);
 return c7;	});
 
@@ -323,6 +322,7 @@ cell=8;
 o.textContent=cell;
 s8.textContent=choice;
 arr[7]=choice;
+
 setDisable(c);
 return c8;
 	});
@@ -334,6 +334,7 @@ cell=9;
 o.textContent=cell;
 arr[8]=choice;
 s9.textContent=choice;
+
 setDisable(c);
 return c9;
 
@@ -357,7 +358,8 @@ else{
 p1.addEventListener("click",function(){
 	
 	
-	setEnable(c);
+	setEnableAll(c);
+	
 	res=winCheck(arr);
 	if(res==="no"){
 	last_used=setCell(p1choice);
@@ -370,7 +372,8 @@ else{
 	}});
 
 p2.addEventListener("click",function(){
-	setEnable(c);
+	setEnableAll(c);
+	
 	res=winCheck(arr);
 	if(res==="no"){
 	last_used=setCell(p2choice);
